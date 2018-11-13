@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+ 	<title>
+		SusEnivio - Sustainable Enviroment
+	</title>
+  <link href="./main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="tab">
+  <button class="tablinks" onclick="openSite(event, 'Home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="openSite(event, 'History')">History</button>
+  <button class="tablinks" onclick="openSite(event, 'Projects')">Projects</button>
+  <button class="tablinks" onclick="openSite(event, 'Quiz')">Quiz</button>
+  <button class="tablinks" onclick="openSite(event, 'Pollutions')">Pollutions</button>
+  <button class="tablinks" onclick="openSite(event, 'Contact us')">Contact Us</button>
+  <div class="search-container">
+    <form action = "/action_page.php">
+      <input type = "text" placeholder="Search..."></input>
+      <button type = "submit"><i class = "fa fa-search"></i></button>
+    </form>
+  </div>
+  </div>
+
+  <div id="Home" class="tabcontent">
+  </div>
+
+  <div id="History" class="tabcontent">
+  </div>
+
+  <div id="Projects" class="tabcontent">
+  </div>
+
+  <div id="Quiz" class="tabcontent">
+  </div>
+
+  <div id="Contact us" class="tabcontent">
+  </div>
+
+  <script>
+  function openSite(evt, siteName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(siteName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+  document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+</html>
