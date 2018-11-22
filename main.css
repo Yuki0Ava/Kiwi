@@ -5,11 +5,11 @@ body{
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+  }
 
 h1{
   font-size: 40px;
@@ -65,10 +65,11 @@ u{
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: rgb(182,223, 159);
+    font-family: Arial;
 }
 
 /* Style the buttons inside the tab */
-.tab button {
+.tab a {
     background-color: inherit;
     color: black;
     float: left;
@@ -77,18 +78,27 @@ u{
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 16px;
+    text-decoration: none;
+    text-align:
+    
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tab a:hover, .dropdown:hover {
     background-color: rgb(123, 246, 52);
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tab a.active {
     background-color: rgb(162,252,110);
 }
+
+.tab a.icon {
+  display: none;
+}
+
+
 
 /* Style the tab content */
 .tabcontent {
@@ -96,6 +106,54 @@ u{
     padding: 6px 12px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
+}
+
+/* The dro container */
+.dropdown {
+  float:left;
+  overflow: hidden;
+}
+
+/*Dropdown button */
+.dropdown.dropbtn{
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a green background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(202,219,192);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Fade in tabs */
@@ -136,6 +194,22 @@ u{
 }
 
 @media screen and (max-width: 600px) {
+  .tab a:not(:first-child) {display: none;}
+  .tab a.icon {
+    float: right;
+    display: block;
+  }
+  .tab.responsive {position; relative;}
+  .tab.responsive.icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .tab.responsive a{
+    float: none;
+    display: block;
+    text-align: left;
+  }
   .search-container {
     float: none;
   }
