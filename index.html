@@ -12,69 +12,50 @@
 </head>
 <body>
   <div class="tab" id= "myTopnav">
-    <a href="#startsida" class= "active" id="defaultOpen">Startsida</a>
-    <div class="dropdown">
-      <button class="dropbtn" id="shopping" class="tablinks">Shopping
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+    <button class="tablinks" onclick="openSite(event, 'Startsida')" id="defaultOpen">Starsida</button>
+    <button class="tablinks" onclick="openSite(event, 'Konsumption')">Konsumption
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn" id="resor" class="tablinks">Resor
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+    <button class="tablinks" onclick="openSite(event, 'Resor')">Resor
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn" id="boende" class="tablinks">Boende
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+    <button class="tablinks" onclick="openSite(event, 'Boende')">Boende
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
-    <div class="dropdown">
-      <button class="dropbtn" id="mat" class="tablinks">Mat
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+    <button class="tablinks" onclick="openSite(event, 'Mat')">Mat
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
-      <button class="dropbtn" id ="klimatkompensera" class="tablinks">Klimatkompensera
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+    <button class="tablinks" onclick="openSite(event, 'Klimatkompensera')">Klimatkompensera
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
     </div>
-    <a href="quiz" class="tablinks">Quiz</a>
-    <div class="dropdown">
-      <button class="dropbtn" id="kontakta oss" class="tablinks">Kontakta oss
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
-    </div>
-    <a href = "javascript:void(0);" class= "icon" onclick="myFunction()">
-    </a>
+    <button class="tablinks" onclick="openSite(event, 'Quiz')">Quiz</button>
+    <button class="tablinks" onclick="openSite(event, 'Kontakta oss')">Kontakta oss</button>
+
     <div class="search-container">
       <form action = "/action_page.php">
         <input type = "text" placeholder="Sök..."></input>
@@ -83,39 +64,38 @@
     </div>
   </div>
 
-
-  <div id="startsida" class="tabcontent">
+  <div id="Startsida" class="tabcontent">
   </div>
 
-  <div id="shopping" class="tabcontent">
+  <div id="Konsumption" class="tabcontent">
   </div>
 
-  <div id="resor" class="tabcontent">
+  <div id="Resor" class="tabcontent">
   </div>
 
-  <div id="boende" class="tabcontent">
+  <div id="Boende" class="tabcontent">
   </div>
 
-  <div id="mat" class="tabcontent">
+  <div id="Mat" class="tabcontent">
   </div>
 
-  <div id="klimatkompensera" class="tabcontent">
+  <div id="Klimatkompensera" class="tabcontent">
   </div>
 
-  <div id="quiz" class="tabcontent">
+  <div id="Quiz" class="tabcontent">
   </div>
 
-  <div id="kontakta oss" class="tabcontent">
+  <div id="Kontakta oss" class="tabcontent">
   </div>
 
   <script>
   function openSite(evt, siteName) {
       var i, tabcontent, tablinks;
-      var x = document.getElementsByClassName("myTopnav");
-      if (x.className === "tab") {
-        x.className += " responsive";
+      tabcontent = document.getElementsByClassName("tabcontent");
+      if (tabcontent.className === "tab") {
+        tabcontent.className += " responsive";
       } else {
-        x.className = "tab";
+        tabcontent.className = "tab";
       }
       for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";

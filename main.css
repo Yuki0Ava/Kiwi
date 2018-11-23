@@ -1,6 +1,6 @@
 body{
   box-sizing: border-box;
-  background-color: rgb(181,188,177);
+  background-color: rgb(204,243,203);
   margin: 0;
 }
 
@@ -65,11 +65,10 @@ u{
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: rgb(182,223, 159);
-    font-family: Arial;
 }
 
 /* Style the buttons inside the tab */
-.tab a {
+.tab button  {
     background-color: inherit;
     color: black;
     float: left;
@@ -78,53 +77,9 @@ u{
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font-size: 16px;
-    text-decoration: none;
-    text-align:
-    
+    font-size: 17px;
 }
 
-/* Change background color of buttons on hover */
-.tab a:hover, .dropdown:hover {
-    background-color: rgb(123, 246, 52);
-}
-
-/* Create an active/current tablink class */
-.tab a.active {
-    background-color: rgb(162,252,110);
-}
-
-.tab a.icon {
-  display: none;
-}
-
-
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    -webkit-animation: fadeEffect 1s;
-    animation: fadeEffect 1s;
-}
-
-/* The dro container */
-.dropdown {
-  float:left;
-  overflow: hidden;
-}
-
-/*Dropdown button */
-.dropdown.dropbtn{
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
@@ -152,8 +107,26 @@ u{
 }
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.tablinks:hover .dropdown-content {
   display: block;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: rgb(61, 252, 55);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: rgb(162,252,110);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
 }
 
 /* Fade in tabs */
@@ -194,22 +167,7 @@ u{
 }
 
 @media screen and (max-width: 600px) {
-  .tab a:not(:first-child) {display: none;}
-  .tab a.icon {
-    float: right;
-    display: block;
-  }
-  .tab.responsive {position; relative;}
-  .tab.responsive.icon{
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .tab.responsive a{
-    float: none;
-    display: block;
-    text-align: left;
-  }
+  .tab tab
   .search-container {
     float: none;
   }
