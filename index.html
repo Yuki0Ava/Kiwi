@@ -98,12 +98,56 @@
   </div>
 
   <div id="Quiz" class="tabcontent">
+	<div name="quiz">
+    <p id="q1">
+      Fråga 1:
+      När det kommer till hållbar utveckling handlar det om tre aspekter. Vilka är de?
+      <br><br>
+      <input type="radio" id="1" name="q1" value="0">
+      1. Miljö, etik och juridik
+      <br>
+      <input type="radio" id="2" name="q1" value="1">
+      2. Ekonomiska, ekologiska och humanitära      <br>
+      <input type="radio" id="3" name="q1" value="0">
+      3. Ekologiska, ekonomiska och sociala
+      <br><br>
+    </p>
+    <p id="q2">
+      Varför är det så viktigt att se till att världens städer utvecklas på ett hållbart sätt?
+      <br><br>
+      <input type="radio" id="4" name="q2" value="0">
+      1. För att stadsmiljöer är gråa och trista.
+      <br>
+      <input type="radio" id="5" name="q2" value="1">
+      2. För att det är så mycket bilar i städerna.
+      <br>
+      <input type="radio" id="6" name="q2" value="0">
+      3. För att 70% av jordens befolkning kommer att bo i urbana områden år 2050.
+      <br><br>
+
+    </p>
+    <button type="button" onclick="count()">Submit</button>
+    <p id="svar"></p>
+  </div>  
   </div>
 
   <div id="Kontakta oss" class="tabcontent">
   </div>
 
   <script>
+function count() {
+    var score=0;
+    for (var i=1;i<=6;i++){
+        if (document.getElementById(i).checked){
+          if (document.getElementById(i).value==1){
+            score++;
+          }
+        }
+
+    }
+
+    document.getElementById("svar").innerHTML = score+" Rätt";
+  }	  
   function openSite(evt, siteName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
