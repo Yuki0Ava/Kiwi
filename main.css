@@ -164,3 +164,8 @@ li{
   }
 
 }
+
+.bilder{
+  float: right;
+  padding-right: 40px;
+}
