@@ -4,13 +4,6 @@ body{
   margin: 0;
 }
 
-.center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-  }
-
 h1{
   font-size: 40px;
   letter-spacing: 2px;
@@ -56,24 +49,6 @@ li{
   padding: 0px;
 }
 
-s{
-  letter-spacing: 2px;
-  margin-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  align-items: right;
-}
-
-u{
-  letter-spacing: 2px;
-  margin-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-}
-
 .tab {
     overflow: hidden;
     border: 1px solid #ccc;
@@ -114,6 +89,23 @@ u{
 .tabcontent1 {
   padding-left: 25%;
 
+}
+
+.submit_buttons{
+  background-color: rgb(182,223, 159);
+  color: black;
+  float: center;
+  border: 2px solid black;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 13px;
+  transition: 0.3s;
+  font-size: 17px;
+
+}
+
+.submit_buttons:hover{
+  background-color: rgb(61, 252, 55);
 }
 
 /* Fade in tabs */
